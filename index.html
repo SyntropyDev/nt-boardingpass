@@ -36,7 +36,6 @@
   <body>
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
-        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
         <h1 class="logo">National Travel</h1>
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
@@ -44,25 +43,19 @@
       </div>
     </header>
 
-    <nav class="navdrawer-container promote-layer">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-      </ul>
-    </nav>
-
     <main>
-     <form class="form-horizontal">
+     <form class="" action="https://national.herokuapp.com/api/v1/boarding-passes" method="post">
 <fieldset>
 
 <!-- Form Name -->
-<h3>Booking</h3>
+<h3>Boarding Pass Upload</h3>
 </br>
+
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="reference_number">Reference Number</label>
+  <label class="control-label" for="email">Flight Number</label>
   <div class="controls">
-    <input id="reference_number" name="reference_number" type="text" placeholder="" class="input-xlarge">
+    <input id="email" name="email" type="email" placeholder="me@example.com" class="input-xlarge">
 
   </div>
 </div>
@@ -70,9 +63,19 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="flight_number">Flight Number</label>
+  <label class="control-label" for="referenceNum">Reference Number</label>
   <div class="controls">
-    <input id="flight_number" name="flight_number" type="text" placeholder="" class="input-xlarge">
+    <input id="referenceNum" name="referenceNum" type="text" placeholder="L9BSGB" class="input-xlarge">
+
+  </div>
+</div>
+</br>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="flightNumber">Flight Number</label>
+  <div class="controls">
+    <input id="flightNumber" name="flightNumber" type="text" placeholder="1452" class="input-xlarge">
 
   </div>
 </div>
@@ -80,9 +83,9 @@
 
 <!-- File Button -->
 <div class="control-group">
-  <label class="control-label" for="boarding_pass">Upload Boarding Pass QR Code/Barcode</label>
+  <label class="control-label" for="file">Upload Boarding Pass QR Code/Barcode</label>
   <div class="controls">
-    <input id="boarding_pass" name="boarding_pass" class="input-file" type="file">
+    <input id="file" name="file" class="input-file" type="file">
   </div>
 </div>
 </br>
